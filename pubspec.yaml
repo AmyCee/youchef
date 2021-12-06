@@ -29,6 +29,7 @@ environment:
 dependencies:
   provider: ^6.0.1
   video_player: ^2.2.7
+  accordion: ^2.1.1
   image_picker: ^0.8.4+4
   # smooth_page_indicator: ^1.0.0+2
   flutter:

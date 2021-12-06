@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:you_chef/models/recipe/recipe_data.dart';
 import 'package:you_chef/screens/recipe_info.dart';
@@ -8,6 +7,7 @@ class RecipeUi extends StatelessWidget {
   RecipeData recipe;
 
   RecipeUi({Key? key, required this.recipe}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class RecipeUi extends StatelessWidget {
       child: MaterialButton(
         onPressed: (){
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => RecipeInfo()),
+            MaterialPageRoute(builder: (context) => RecipeInfo(recipe: recipe,)),
           );
         },
         minWidth: MediaQuery.of(context).size.width * 0.8,

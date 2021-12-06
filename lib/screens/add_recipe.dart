@@ -212,7 +212,7 @@ class _AddRecipeState extends State<AddRecipe> with RecipeMixin{
                         minWidth: 100,
                         shape:  RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                         onPressed: () {
-                          RecipeData recipeData = RecipeData( image: _image?.path ?? "", recipeName: nameController.text);
+                          RecipeData recipeData = RecipeData( image: _image?.path ?? "", recipeName: nameController.text, ingredients: ingredientController.text.split(','), instructions: instructionController.text.split(','));
                           addRecipe(context, recipeData);
                           Navigator.pop(context,
                             MaterialPageRoute(builder: (context) => StewRecipe()),
